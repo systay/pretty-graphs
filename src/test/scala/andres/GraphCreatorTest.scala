@@ -22,9 +22,8 @@ package andres
 import org.junit.Test
 import org.neo4j.cypher.ExecutionEngine
 import org.neo4j.kernel.EmbeddedGraphDatabase
-import java.io.File
 
-class GraphCreatorTest {
+class GraphCreatorTest extends DeleteDir {
   val directory = "./target/graph.db"
   delete(directory)
 
@@ -46,27 +45,5 @@ class GraphCreatorTest {
 
     engine.execute("start ref=node(0) create ref-[:wheel]->{wheel}, ref-[:star]->{star}, ref-[:friends]->{friends}", map)
     db.shutdown()
-  }
-
-  def delete(fileName: String): Unit = delete(new File(fileName))
-
-  def delete(files: Iterable[File]): Unit = files.foreach(delete)
-
-  def delete(file: File) {
-    if (file.isDirectory) {
-      delete(listFiles(file))
-      file.delete
-    }
-    else if (file.exists)
-      file.delete
-  }
-
-  def listFiles(dir: File): Array[File] = wrapNull(dir.listFiles())
-
-  private def wrapNull(a: Array[File]) = {
-    if (a == null)
-      new Array[File](0)
-    else
-      a
   }
 }
