@@ -1,5 +1,8 @@
 *.class
 *.log
+.idea
+*.iml
+*.iws
 
 # sbt specific
 dist/*
