@@ -1,4 +1,6 @@
 // http://en.wikipedia.org/wiki/Wheel_graph
+// Live: http://tinyurl.com/cyburot
+
 // Works by first creating a center node, and then once
 // per element in the range, creates a leaf and connects
 // it to the center
