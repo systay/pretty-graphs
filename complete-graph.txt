@@ -1,0 +1,13 @@
+// http://en.wikipedia.org/wiki/Complete_graph
+
+create center
+foreach( x in range(1,10) : 
+   create leaf={count : x}, center-[:X]->leaf
+)
+with center
+match leaf1<--center-->leaf2
+where id(leaf1)<id(leaf2)
+create leaf1-[:X]->leaf2
+with center
+match center-[r]->()
+delete center,r;
