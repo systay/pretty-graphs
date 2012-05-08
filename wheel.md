@@ -1,6 +1,6 @@
 [Wheel Graph](http://en.wikipedia.org/wiki/Wheel_graph)
 =============
-![Image of graph](http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Wheel_graphs.svg/200px-Wheel_graphs.svg.png)
+![Image of graph](http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Wheel_graphs.svg/500px-Wheel_graphs.svg.png)
 
 [Live test](http://tinyurl.com/cyburot)
 
